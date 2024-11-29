@@ -5,10 +5,14 @@
 
 int main()
 {
-    Intervalle<int> I(3 , 4);
-    I.afficher();
-    std::cout << "Borne inferieure : " << I[0] << std::endl;
-    std::cout << "Borne superieure : " << I[1] << std::endl;
+   Intervalle<int> I(3 , 4);
+   I.afficher();
+   cout << "Bourne Inf : " << endl;
+   I[0];
+   cout << endl;
+   cout << "Bourne Sup : " << endl;
+   I[1];
+   cout << endl;
    
 }
 
