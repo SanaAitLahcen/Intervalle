@@ -11,7 +11,7 @@ private:
 public:
 	Intervalle(I, I);
 	~Intervalle();
-	I operator[](int ind) const;
+	void operator[](int ind) const;
 	void afficher() const;
 };
 
@@ -26,19 +26,19 @@ inline Intervalle<I>::~Intervalle()
 }
 
 template<class I>
-inline I Intervalle<I>::operator[](int ind) const
+inline void Intervalle<I>::operator[](int ind) const
 {
 	if (ind == 0)
-	{
-		return bourne_inf; // Retourne la borne inférieure
-	}
-	else if (ind == 1)
-	{
-		return bourne_sup; // Retourne la borne supérieure
-	}
+        {
+	std::cout<< bourne_inf; // Retourne la borne infÃ©rieure
+        }
+        else if (ind == 1)
+        {
+	std::cout<< bourne_sup; // Retourne la borne supÃ©rieure
+        }
 	else
 	{
-		std::cout << "Erreur : Indice invalide ! Utilisez 0 pour la borne inférieure ou 1 pour la borne supérieure." << std::endl;
+		std::cout << "Erreur : Indice invalide ! Utilisez 0 pour la borne infÃ©rieure ou 1 pour la borne supÃ©rieure." << std::endl;
 		exit(1);  // Termine le programme
 	}
 }
